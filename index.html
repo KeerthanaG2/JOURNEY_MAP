@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Rural Pest Management Journey Map</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div id="lang-switch">
+    <button onclick="setLang('en')">English</button>
+    <button onclick="setLang('hi')">हिन्दी</button>
+  </div>
+  <div class="screen" id="name-screen">
+    <h2 id="name-prompt"></h2>
+    <input id="name-input" type="text" autocomplete="off" placeholder=""/>
+    <button id="start-btn" onclick="startJourney()"></button>
+  </div>
+  
+  <div class="screen" id="journey-screen" style="display:none;">
+    <h1 id="journey-title"></h1>
+    <div class="timeline-section">
+      <div class="timeline-row" id="timeline-row"></div>
+      <div class="journey-grid">
+        <div class="journey-grid-row" id="pain-drop-row"></div>
+        <div class="journey-grid-row" id="idea-drop-row"></div>
+      </div>
+    </div>
+    <div id="marker-bank">
+      <div class="marker-bank-box problem-box">
+        <div class="marker-bank-title">Problems:</div>
+        <div class="marker-bank-row" id="pain-row"></div>
+      </div>
+      <div class="marker-bank-box solution-box">
+        <div class="marker-bank-title">Solutions/Ideas:</div>
+        <div class="marker-bank-row" id="idea-row"></div>
+      </div>
+    </div>
+
+    <div class="submit-btn-area">
+      <button id="submit-btn" onclick="showSummary()"></button>
+    </div>
+  </div>
+
+  <div class="screen" id="summary-screen" style="display:none;">
+    <h2 id="summary-title"></h2>
+    <div id="summary-content"></div>
+    <button id="restart-btn">Restart</button>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
